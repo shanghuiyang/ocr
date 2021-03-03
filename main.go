@@ -11,8 +11,8 @@ import (
 
 const (
 	// replace your_app_key and your_secret_key with yours
-	appKey    = "hc1tZ5KDCGk3tGHMhlvQRclv"
-	secretKey = "0RNCrXGRfWSsC5BDktH5ujBXxK6ixpnx"
+	baiduOcrAppKey    = "your_ocr_app_key"
+	baiduOcrSecretKey = "your_ocr_secret_key"
 )
 
 func main() {
@@ -23,7 +23,7 @@ func main() {
 	}
 	imgf := os.Args[1]
 
-	auth := oauth.New(appKey, secretKey, oauth.NewCacheMan())
+	auth := oauth.New(baiduOcrAppKey, baiduOcrSecretKey, oauth.NewCacheMan())
 	r := recognizer.New(auth)
 	text, err := r.Recognize(imgf)
 	if err != nil {
