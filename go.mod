@@ -1,5 +1,5 @@
-module github.com/shanghuiyang/word-recognizer
+module github.com/shanghuiyang/ocr
 
-go 1.13
+go 1.15
 
-require github.com/shanghuiyang/go-speech v0.0.0-20200703140722-aa8c56257d1b
+require github.com/shanghuiyang/oauth v0.0.0-20210815163430-0403e002fe02

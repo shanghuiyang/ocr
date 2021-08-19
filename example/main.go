@@ -1,8 +1,3 @@
-# word-recognizer
-ocr implements Optical Character Recognition(OCR) using the APIs provided by web services like baidu and google.
-
-## usage
-```go
 package main
 
 import (
@@ -21,7 +16,12 @@ const (
 )
 
 func main() {
-	imgf := "images/test.jpg"
+	if len(os.Args) != 2 {
+		fmt.Println("error: invalid args")
+		fmt.Println("usage: image-recognizer test.jpg")
+		os.Exit(1)
+	}
+	imgf := os.Args[1]
 	img, err := ioutil.ReadFile(imgf)
 	if err != nil {
 		log.Printf("failed to read file %v, error: %v", imgf, err)
@@ -37,4 +37,3 @@ func main() {
 	}
 	fmt.Println(text)
 }
-```

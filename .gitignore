@@ -6,7 +6,6 @@
 *.dylib
 
 /main
-/wrod-recognizer
 /tmp
 
 # Test binary, built with `go test -c`
